@@ -1,0 +1,41 @@
+<!-- index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>Online Test</h1>
+ <form id="test-form">
+    <div class="question">
+        <p>1. What is the capital of Nigeria?</p>
+        <input type="radio" name="q1" value="Abuja"> Abuja
+        <input type="radio" name="q1" value="Lagos"> Lagos
+        <input type="radio" name="q1" value="Ibadan"> Ibadan
+    </div>
+    <button>submit</button>
+ </form>
+ <div id="result"></div>
+ <script>
+  const form = document.getElementById(test-form);
+  const resultDiv = document.getElementById(result);
+
+  const answer = {
+    q1: Abuja
+  };
+
+  form.addEventListener(submit, (e) => {
+    <e.preventDefault();
+    let score =0;
+    const formData = new formData(form);
+    for (const [name, value] of formData) {
+      if (answer[name] === value) {
+        score++;
+      }
+    }
+  resultDiv.innerText = you scored ${score} out of ${Object.keys(answers).length}';
+  });
+  alert(Test submit!);
+</body>
+</html> 
